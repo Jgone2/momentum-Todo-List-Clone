@@ -5,7 +5,7 @@
 
 예를 들어, 학생의 정보를 입력한다고 할 때 <br />
 기존의 `variable`을 사용하면 다음과 같이 정보를 입력할 수 있다.
-```
+```js
 const stuName = "gildong";
 const stuAage = 25;
 const stuAddr = "Korea";
@@ -16,12 +16,12 @@ const stuAddr = "Korea";
 
 이 점을 보완하기 위해 변수를 통합하는 `array`를 사용 해볼 수 있다.<br />
 위의 코드를 arr로 표현을 했을 때 다음과 같이 표현할 수 있다.
-```
+```js
 const stu = ["gildong", 25, "Korea"];
 ```
 확실히 단순히 variable만을 사용할 때 보다 정보의 통합성이 생겼다. 지금의 예제는 간단하지만 프로퍼티(property)값이 많아지게 되면 arr는 데이터의 의미를 따로 작성할 수 없기 때문에, 어떤 프로퍼티에 대한 값인지 알기 힘들어진다.<br />
-// stu\[0] = name
-// stu\[1] = age
+// stu\[0] = name<br />
+// stu\[1] = age<br />
 와 같이 주석을 표기함으로써 해결할 수 있지만 조금 더 직관적인 방법이 필요하다.<br/><br />
 > 💡 프로퍼티(Property)는 객체에 포함된 속성 명과 속성 값의 한 쌍을 말한다.<br />
 
@@ -31,7 +31,7 @@ const stu = ["gildong", 25, "Korea"];
 
 arr에서 발생한 문제를 해결해 줄 수 있는 것이 바로 객체(Object)다.
 객체는 중괄호({})를 사용해서, 해당 variable에 관한 속성명을 함께 사용할 수 있다.
-```
+```js
 const stu = {
   name: "gildong",
   age: 25,
@@ -41,7 +41,7 @@ const stu = {
 객체를 사용하면 stu내부에 name, age, addr 프로퍼티가 속해 있기 때문에 선언마다 stu를 붙여 줄 필요가 없게되어 훨씬 직관적으로 작성이 가능하다.<br />
 프로퍼티와 프로퍼티 값은 콤마(,)를 사용하여 속성을 추가해 나갈 수 있다.<br />
 데이터의 변경이 필요할 때, `객체명.프로퍼티(수정할 데이터)`의 형식으로 데이터를 수정할 수있다.
-```
+```js
 stu.name = "dong"
 stu.age = 23
 stu.age = stu.age + 1
@@ -50,7 +50,7 @@ constant를 사용한 변수는 값을 변경할 수 없는데 변경을 했는�
 값을 수정하는 것 뿐만아니라 property 자체를 제거하거나 추가할 수도 있다.<br />
 추가는 `객체명.추가할 property`<br />
 삭제는 `delete 객체명.삭제할 property`의 형태로 추가/삭제가 가능하다.
-```
+```js
 stu.hobby = "soccer"  //추가
 del stu.addr          //삭제
 ```
