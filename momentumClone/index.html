@@ -10,15 +10,15 @@
   <body>
     <!-- 유효성 검사를 위해서는 form을 사용해야 내부 input의 유효성을 검사할 수 있음 -->
     <!-- from이 submit되면 페이지가 새로고침 됨 -->
-    <form id="login-form">
+    <form id="login-form" class="hidden">
       <input
         required
         maxlength="15"
         type="text"
         placeholder="What is your name?"
       />
-      <button>Log In</button>
     </form>
+    <button>Log In</button>
     <h1 id="greeting" class="hidden"></h1>
     <!-- <a href="https://nomadcoders.co">To to courses</a> -->
     <script defer src="app.js"></script>
