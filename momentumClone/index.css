@@ -2,6 +2,10 @@ body {
   background-color: beige;
 }
 
+form#login-form input {
+  outline: none;
+}
+
 .hidden {
   display: none;
 }

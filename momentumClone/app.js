@@ -39,7 +39,6 @@ function paintGreetings(username) {
 function onLoginSubmit(event) {
   event.preventDefault(); // 기본동작 실행 제어
   loginForm.classList.add(HIDDEN_CLASS);
-  loginBtn.innerHTML = `Log Out`;
   const username = loginInput.value;
   localStorage.setItem(USERNAME_KEY, username);
   paintGreetings(username);
